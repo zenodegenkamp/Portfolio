@@ -249,7 +249,7 @@ nav ul li a {
 
 
 
-@media (max-width: 768px){
+@media (max-width: 850px){
     .header__column__content p,  
     .header__column__content h1 {
     max-width: 80%;
@@ -263,7 +263,7 @@ nav ul li a {
 
 }
 
-@media (max-width: 480px){
+@media (max-width: 680px){
     .header__column__content p,  
     .header__column__content h1 {
         max-width: 90%;
