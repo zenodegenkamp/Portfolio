@@ -243,7 +243,7 @@ nav ul li a {
     }
 
     .header__arrow {
-        bottom: 1px;
+        bottom: 40px;
     }
 }
 
@@ -261,6 +261,10 @@ nav ul li a {
     max-width: 600px;
 }
 
+.header__arrow {
+    bottom: 40px;
+}
+
 }
 
 @media (max-width: 680px){
@@ -273,6 +277,7 @@ nav ul li a {
 
        .header__column__content {
         max-width: 300px;
+        margin-bottom: 2em;
     }
 
     .header__logo {
@@ -280,6 +285,9 @@ nav ul li a {
         height: 15px;
     }
 
+    .header__arrow {
+        bottom: 60px;
+    }
     /* .header__row {
        top: 50%;
        bottom: 50px;
