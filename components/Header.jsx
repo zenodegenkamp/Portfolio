@@ -7,14 +7,20 @@ import next from '../images/next.png'
 import dataSet from '../data.js'
 import Topnav from '../components/Topnav'
 import Sidenav from "../components/Sidenav"
+import kohphiphi from  "../images/kohphiphi.jpeg"
+import kotao from "../images/kotao.jpeg"
+import khaosok from "../images/khaosok.jpeg"
+import changmai from "../images/changmai.jpeg"
+import pai from "../images/pai.jpeg"
 
-
+// background: `linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(${dataSet[currentIndex].locationImageUrl}) no-repeat`,
 export default function Header(){
 
+    const imageArray = [kohphiphi, kotao, khaosok, changmai, pai]
     const [currentIndex, setCurrentIndex] = useState(0)
 
     const headerStyle = {
-        background: `linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(${dataSet[currentIndex].locationImageUrl}) no-repeat`,
+        background: `linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(${imageArray[currentIndex]}) no-repeat`,
         backgroundSize: 'cover',
         backgroundAttachment: 'fixed',
         minWidth: '100%',
