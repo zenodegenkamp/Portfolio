@@ -1,17 +1,28 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
-export default function Sidenav() {
 
+export default function Sidenav(props) {
+
+    const classname = props.darkmode ? "darkmode" : "lightmode"
 
     return (
         <>
-            <div className="header__sidebar">
-                <a href="https://www.linkedin.com/in/zeno-degenkamp/">LINKEDIN</a>
-                <a href="https://www.polarsteps.com/ZenoDegenkamp/4926862-backpacken-door-azie?s=cde37112-63ae-4a0a-908e-1291a1b02862">POLARSTEPS</a>
-                <a href="https://www.instagram.com/zenodegenkamp/">INSTAGRAM</a>
 
+            <div
+        
+                className={`${classname} header__sidebar`}
+                onClick={props.onClick}
+            >
+                <p className='aboutme'>
+                    ABOUT ME
+                </p>
+                <p className='portfolio'>
+                    PORTFOLIO PROJECT
+                </p>
+                <a>DOWNLOAD CV</a>
+               
             </div>
-            <div className="header__line"></div>
         </>
     )
 }
