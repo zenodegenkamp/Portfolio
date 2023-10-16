@@ -109,13 +109,13 @@ export default function Header() {
                                 {visibleInfo === "portfolio" && <><p style={styles}>Inspired by Apple Vision Pro, my portfolio website is optimized for a rich 3D experience on larger screens. If you're on a laptop or a bigger screen, you can explore my portfolio in all its 3D glory. But even if you're on a smaller device, you're still welcome to visit any of my project websites directly. </p>
                                 
                                 <div className="header__column__info__links">
-                                    <a style={styles}>PORTFOLIO</a>
-                                    <a style={styles}>AI CHATBOT</a>
-                                    <a style={styles}>AI STORYCREATOR</a>
-                                    <a style={styles}>CODE PLATFORM</a>
-                                    <a style={styles}>TRAVEL JOURNAL</a>
-                                    <a style={styles}>INTERACTIVE QUIZ</a>
-                                    <a style={styles}>ICON GAME</a>
+                                    <a target="_blank" href="https://zeno-degenkamp.netlify.app/" style={styles}>PORTFOLIO</a>
+                                    <a target="_blank" href="https://zingy-cassata-2ad8ad.netlify.app/" style={styles}>AI CHATBOT</a>
+                                    <a target="_blank" href="https://marvelous-fenglisu-f6d29b.netlify.app/" style={styles}>AI STORYCREATOR</a>
+                                    <a target="_blank" href="https://codeconnect-react.netlify.app/" style={styles}>CODE PLATFORM</a>
+                                    <a target="_blank" href="https://travel-react-zeno.netlify.app/" style={styles}>TRAVEL JOURNAL</a>
+                                    <a target="_blank" href="https://hidden-quiz-minigame.netlify.app/" style={styles}>INTERACTIVE QUIZ</a>
+                                    <a target="_blank" href="https://icon-ninja.netlify.app/" style={styles}>ICON GAME</a>
                                 </div>
                                 </>}
 
