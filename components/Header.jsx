@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react"
 import Topnav from '../components/Topnav'
 import Sidenav from "../components/Sidenav"
 import Bottomnav from "./Bottomnav"
+import Slider from "./Slider"
 import { TypingText } from '../components/CustomTexts'
 
 import { motion } from 'framer-motion';
@@ -13,12 +14,12 @@ import { TypeAnimation } from 'react-type-animation';
 
 export default function Header() {
 
-    const [darkMode, setDarkMode] = React.useState("false");
+    const [darkMode, setDarkMode] = React.useState("true");
     const [visibleInfo, setVisibleInfo] = React.useState("dev");
 
 
     const styles = {
-        color: darkMode ? `black` : `white`,
+        // color: darkMode ? `white` : `white`,
         transition: `1.5s ease-out`,
     };
 
@@ -69,13 +70,15 @@ export default function Header() {
 
                 <div className="header__row">
 
-                    <div className="header__column__content">
+                    
+                        
+                        <div className="header__column__content">
                         <TypingText
-                            title="Hello, my name is"
+                            title={visibleInfo === "dev" ? "Hello, my name is" : "Zeno Degenkamp"}
                             className="header__column__content-p"
                             darkmode={darkMode}
                         />
-                        {visibleInfo === "dev" && <h1 style={styles}>Zeno Degenkamp</h1>}
+                        {visibleInfo === "dev" && <h1>Zeno Degenkamp</h1>}
                         {visibleInfo === "aboutme" && <h1 style={styles}>About me</h1>}
                         {visibleInfo === "portfolio" && <h1 style={styles}>Portfolio</h1>}
                     </div>
@@ -98,22 +101,40 @@ export default function Header() {
                                 ]}
                                 wrapper="span"
                                 speed={30}
-                                style={{ fontSize: '64px', display: 'inline-block', color: darkMode ? `black` : `white`}}
+                                style={{ fontSize: '64px', display: 'inline-block', color: 'white'}}
                                 repeat={Infinity}
                             />}
-                            {visibleInfo === "aboutme" && <p style={styles}>I'm Zeno, a driven professional with a background in business administration and IT. I hold a Master's degree in Entrepreneurship and a Bachelor's Degree in Business Administration, with a minor in programming. I've also completed the Front-end Career Path (Scrimba), a UX Design Thinking course from Growthtribe, and earned my Product Owner certification (PSPO 1).
+                            {visibleInfo === "aboutme" && <p style={styles}>I'm Zeno, a driven professional with a background in business administration and IT. 
                                 Beyond certificates, I'm passionate about fitness, reading, and travel. I recently explored Asia for 8 months, gaining adaptability and impressive problem-solving skills. Now, I'm aiming to excel as a Product Owner. Explore my profile to learn more about me!</p>}
-                            {visibleInfo === "portfolio" && <><p style={styles}>The portfolio website is inspired by the Apple vision pro and tries to create a 3D effect, which requires a larger screen to be fully appreciated. On a mobile device, the effect may be distorted or difficult to see. To discover my portfolio website in its full 3D glory, please use a laptop or a bigger screen. Thanks!</p><a style={styles}>Click here</a></>}
+                                {visibleInfo === "portfolio" && <><p style={styles}>Inspired by Apple Vision Pro, my portfolio website is optimized for a rich 3D experience on larger screens. If you're on a laptop or a bigger screen, you can explore my portfolio in all its 3D glory. But even if you're on a smaller device, you're still welcome to visit any of my project websites directly. </p>
+                                
+                                <div className="header__column__info__links">
+                                    <a style={styles}>PORTFOLIO</a>
+                                    <a style={styles}>AI CHATBOT</a>
+                                    <a style={styles}>AI STORYCREATOR</a>
+                                    <a style={styles}>CODE PLATFORM</a>
+                                    <a style={styles}>TRAVEL JOURNAL</a>
+                                    <a style={styles}>INTERACTIVE QUIZ</a>
+                                    <a style={styles}>ICON GAME</a>
+                                </div>
+                                </>}
 
                         </div>
                     </div>
+                   
+                     
+
+
+
+
+
+                   
 
                     <motion.div variants={fadeIn1('down')}>
                         <Bottomnav darkmode={darkMode} />
                     </motion.div>
-
+                  
                 </div>
-
             </motion.div>
         </div>
     )

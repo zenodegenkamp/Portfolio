@@ -6,7 +6,6 @@ import personallogo from '../images/personallogo.png'
 
 export default function Topnav(props) {
 
-    console.log(props.darkmode)
 
     return (
         <>
