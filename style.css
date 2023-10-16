@@ -207,8 +207,9 @@ input:checked~.toggle {
     justify-content: center;
     color: #fff;
     margin: 18em auto;
-    width: 100%;
-
+    /* max-width: 900px; */
+    width: 100wh;
+    padding-left: 7em;
   }
 
 
@@ -218,7 +219,7 @@ input:checked~.toggle {
   }
 
   .header__column__content p {
-    font-size: 16px;
+    font-size: 24px;
     margin: 0;
     font-weight: 500;
 
@@ -228,7 +229,7 @@ input:checked~.toggle {
     /* color:#fff; */
     font-size: 64px;
     font-weight: 600;
-    margin-bottom: 2em;
+    margin-bottom: 2.4em;
     margin-top: 0;
   }
 
@@ -236,18 +237,22 @@ input:checked~.toggle {
   /* Middle line  */
   .header__row__line {
     width: 4px;
-    height: 140px;
+    height: 150px;
+    margin-right: 1em;
   }
 
   /* Right side  */
 
 
-  .header__column__info p{
-    max-width: 700px;
+  .header__column__info {
+    width: 600px;
     margin-left: 1em;
-    color: #9a9a9a;
+    margin-top: 6em;
+    font-weight: 600;
+    /* font-size: 48px; */
     font-weight: 600;
   }
+
 
   .header__column__info a{
     margin-left: 1em;
