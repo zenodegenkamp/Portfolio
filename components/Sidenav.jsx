@@ -18,7 +18,7 @@ export default function Sidenav(props) {
                     ABOUT ME
                 </p>
                 <p className='portfolio'>
-                    PORTFOLIO PROJECT
+                    PORTFOLIO & PROJECTS
                 </p>
                 <a>DOWNLOAD CV</a>
                

@@ -10,7 +10,7 @@ export default function Topnav(props) {
     return (
         <>
             <nav className='header__topnav'>
-                <p className={props.darkmode ? "darkmode" : "lightmode"}>Click here</p>
+                <p className={props.darkmode ? "darkmode" : "lightmode"}>Click me</p>
                 <label >
                 <span className='animateBg'></span>
                     <input  onClick={props.onClick} type="checkbox"></input>

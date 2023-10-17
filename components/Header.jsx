@@ -51,13 +51,13 @@ export default function Header() {
         <div className="header" >
 
             <Spline onLoad={onLoad} className="spline-bg" scene="https://prod.spline.design/11h0se0nuALzwV9w/scene.splinecode" />
-
+            {/* <iframe onLoad={onLoad} className="spline-bg" src='https://my.spline.design/abstractgradientbackground-8c6dc599f81d2ca95c59cfdf95c29b69/' frameborder='0' width='100%' height='100%'></iframe> */}
             <motion.div
                 variants={staggerContainer}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.25 }}
-                className="staggerContainer"
+            
             >
 
                 <motion.div variants={fadeIn1('down', 'tween', 0.2, 1)}>
@@ -124,7 +124,7 @@ export default function Header() {
                         </div>
                     </div>
                    
-                     <div id="test"></div>
+                    
 
 
 
