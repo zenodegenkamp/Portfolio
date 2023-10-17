@@ -51,11 +51,13 @@ export default function Header() {
         <div className="header" >
 
             <Spline onLoad={onLoad} className="spline-bg" scene="https://prod.spline.design/11h0se0nuALzwV9w/scene.splinecode" />
+
             <motion.div
                 variants={staggerContainer}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.25 }}
+                className="staggerContainer"
             >
 
                 <motion.div variants={fadeIn1('down', 'tween', 0.2, 1)}>
