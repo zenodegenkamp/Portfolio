@@ -10,6 +10,9 @@ import { motion } from 'framer-motion';
 import { slideIn, staggerContainer, textVariant, fadeIn, fadeIn1 } from '../utils/motion';
 import Spline from '@splinetool/react-spline';
 import { TypeAnimation } from 'react-type-animation';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 
 export default function Header() {
@@ -17,11 +20,6 @@ export default function Header() {
     const [darkMode, setDarkMode] = React.useState("true");
     const [visibleInfo, setVisibleInfo] = React.useState("dev");
 
-
-    const styles = {
-        // color: darkMode ? `white` : `white`,
-        transition: `1.5s ease-out`,
-    };
 
     function changeContent(e) {
         if (e.target.className === "aboutme") {
@@ -78,9 +76,9 @@ export default function Header() {
                             className="header__column__content-p"
                             darkmode={darkMode}
                         />
-                        {visibleInfo === "dev" && <h1>Zeno Degenkamp</h1>}
-                        {visibleInfo === "aboutme" && <h1 style={styles}>About me</h1>}
-                        {visibleInfo === "portfolio" && <h1 style={styles}>Portfolio</h1>}
+                        {visibleInfo === "dev" && <h1 className="header__column__content__name">Zeno Degenkamp</h1>}
+                        {visibleInfo === "aboutme" && <h1 >About me</h1>}
+                        {visibleInfo === "portfolio" && <h1 >Portfolio</h1>}
                     </div>
 
                     <div className={darkMode ? `header__row__line lightmode-background` : `header__row__line darkmode-background`}>
@@ -89,6 +87,7 @@ export default function Header() {
                     <div>
                         <div className="header__column__info">
                             {visibleInfo === "dev" && <TypeAnimation
+                                className="typeAnimation"
                                 sequence={[
                                     'Entrepreneur',
                                     1000,
@@ -104,18 +103,19 @@ export default function Header() {
                                 style={{ fontSize: '64px', display: 'inline-block', color: 'white'}}
                                 repeat={Infinity}
                             />}
-                            {visibleInfo === "aboutme" && <p style={styles}>I'm Zeno, a driven professional with a background in business administration and IT. 
+                            {visibleInfo === "aboutme" && <p >I'm Zeno, a driven professional with a background in business administration and IT. 
                                 Beyond certificates, I'm passionate about fitness, reading, and travel. I recently explored Asia for 8 months, gaining adaptability and impressive problem-solving skills. Now, I'm aiming to excel as a Product Owner. Explore my profile to learn more about me!</p>}
-                                {visibleInfo === "portfolio" && <><p style={styles}>Inspired by Apple Vision Pro, my portfolio website is optimized for a rich 3D experience on larger screens. If you're on a laptop or a bigger screen, you can explore my portfolio in all its 3D glory. But even if you're on a smaller device, you're still welcome to visit any of my project websites directly. </p>
+                                {visibleInfo === "portfolio" && <><p >Inspired by Apple Vision Pro, my portfolio website is optimized for a rich 3D experience on larger screens. If you're on a laptop or a bigger screen, you can explore my portfolio in all its 3D glory. But even if you're on a smaller device, you're still welcome to visit any of my project websites directly. </p>
                                 
                                 <div className="header__column__info__links">
-                                    <a target="_blank" href="https://zeno-degenkamp.netlify.app/" style={styles}>PORTFOLIO</a>
-                                    <a target="_blank" href="https://zingy-cassata-2ad8ad.netlify.app/" style={styles}>AI CHATBOT</a>
-                                    <a target="_blank" href="https://marvelous-fenglisu-f6d29b.netlify.app/" style={styles}>AI STORYCREATOR</a>
-                                    <a target="_blank" href="https://codeconnect-react.netlify.app/" style={styles}>CODE PLATFORM</a>
-                                    <a target="_blank" href="https://travel-react-zeno.netlify.app/" style={styles}>TRAVEL JOURNAL</a>
-                                    <a target="_blank" href="https://hidden-quiz-minigame.netlify.app/" style={styles}>INTERACTIVE QUIZ</a>
-                                    <a target="_blank" href="https://icon-ninja.netlify.app/" style={styles}>ICON GAME</a>
+                                <FontAwesomeIcon style={{ color: "white", fontSize: "15px", lineHeight: '27px' }}  icon={faLink} />
+                                    <a target="_blank" href="https://zeno-degenkamp.netlify.app/" >PORTFOLIO</a>
+                                    <a target="_blank" href="https://zingy-cassata-2ad8ad.netlify.app/" >AI CHATBOT</a>
+                                    <a target="_blank" href="https://marvelous-fenglisu-f6d29b.netlify.app/">AI STORYCREATOR</a>
+                                    <a target="_blank" href="https://codeconnect-react.netlify.app/" >CODE PLATFORM</a>
+                                    <a target="_blank" href="https://travel-react-zeno.netlify.app/" >TRAVEL JOURNAL</a>
+                                    <a target="_blank" href="https://hidden-quiz-minigame.netlify.app/" >INTERACTIVE QUIZ</a>
+                                    <a target="_blank" href="https://icon-ninja.netlify.app/" >ICON GAME</a>
                                 </div>
                                 </>}
 
